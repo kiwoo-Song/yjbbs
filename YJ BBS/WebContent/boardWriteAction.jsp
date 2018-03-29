@@ -25,7 +25,7 @@
 </head>
 <body>
 
-	<%
+	<%					// radiovalue 있는 부분 다 추가
 		String userID = null;
 
 		if (session.getAttribute("userID") != null) {
@@ -33,8 +33,8 @@
 			userID = (String) session.getAttribute("userID");
 
 		}
-
-		String radiovalue = null;
+		
+		String radiovalue = null; 
 
 		if (request.getParameter("radiovalue") != null) {
 			radiovalue = request.getParameter("radiovalue");
