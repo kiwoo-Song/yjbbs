@@ -299,7 +299,7 @@ nav li a {
 							<th colspan="2"
 								style="background-clor: #eeeeee; text-align: ccenter;">게시판
 								글쓰기</th>
-
+							<!-- Hoons Changed -->
 							<th><input name="radiovalue" checked type="radio" value="a">익명</th>
 							<th><input name="radiovalue" type="radio" value="u">비익명</th>
 						</tr>
