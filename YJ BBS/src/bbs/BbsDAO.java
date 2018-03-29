@@ -203,7 +203,7 @@ public class BbsDAO {
 		}
 		return -1;
 	}
-
+	// 익명이면 0 비익명이면 1, bbsAnonymous 콜롬 추가
 	public int setAnonymousUser(int bbsID) {
 		String SQL = "UPDATE bbs SET bbsAnonymous=? where bbsID=?";
 		try {
