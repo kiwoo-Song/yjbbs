@@ -133,11 +133,12 @@ public class BbsDAO {
 
 	// 10페이지 단위 특정한페이지존재하는지 물어보는함수
 	public boolean nextPage(int pageNumber) {
-		String SQL = "SELECT * FROM BBS WHERE bbsID < ? AND bbsAvailable =1 ORDER BY bbsID DESC LIMIT 10";
+		String SQL = "SELECT * FROM BBS WHERE bbsID < ? AND bbsAvailable =1";
 		ArrayList<Bbs> list = new ArrayList<Bbs>();
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(SQL); // 실행준비단계
 			pstmt.setInt(1, getNext() - (pageNumber - 1) * 10);
+			rs= pstmt.executeQuery();
 			if (rs.next()) {
 				return true;
 
